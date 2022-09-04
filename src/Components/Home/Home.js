@@ -1,37 +1,16 @@
 import React from 'react'
-import classes from './Home.module.css'
-import Card from '../Card/Card'
+import { useState } from 'react';
+import Modal from '../Modal/Modal';
 
 
-import { Grid } from '@mui/material';
+
 const Home = () => {
-  return (
-    <div className={classes.container}>
-      <div className={classes.grids}>
-      <Grid container spacing={2}>
-  <Grid item xs={4}>
-    <Card>xs=8</Card>
-  </Grid>
-  <Grid item xs={4}>
-    <Card>xs=8</Card>
-  </Grid>
-  <Grid item xs={4}>
-    <Card>xs=8</Card>
-  </Grid>
-  <Grid item xs={4}>
-    <Card>xs=8</Card>
-  </Grid>
-  <Grid item xs={4}>
-    <Card>xs=8</Card>
-  </Grid>
-  <Grid item xs={4}>
-    <Card>xs=8</Card>
-  </Grid>
-  
+  const [openModal, setOpenModal] = useState(false)
 
-</Grid>
-         
-      </div>
+  return (
+    <div>
+      <button onClick={()=> setOpenModal(true)}>Add Note</button>
+      {openModal && <Modal closeModal={setOpenModal}/>}
     </div>
   )
 }
