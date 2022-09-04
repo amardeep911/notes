@@ -1,0 +1,38 @@
+.container{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+    /* background-image: url('../../Assets/Img/pexels-gradienta-7135121.jpg'); */
+    background-color: wheat;
+    z-index: 10;
+    backdrop-filter: blur(65px);
+    background-size: cover;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+}
+.beech{
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    justify-content: center; */
+    position: absolute;
+    left: 60%;
+    top: 30%;
+}
+.grids{
+    position: relative;
+    justify-content: center;
+    margin-left: 20px;
+    margin: auto;
+
+    /* display: flex;
+    flex-direction: row; */
+    /* display: grid;
+    grid-template-rows: 15rem, 15rem;
+    grid-template-columns: 20rem,20rem,20rem ; */
+    
+}

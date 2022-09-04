@@ -1,0 +1,6 @@
+.body{
+    
+    background-image: url('./pexels-gradienta-7135121.jpg');
+    background-size: cover;
+    backdrop-filter: blur(25px);
+}
