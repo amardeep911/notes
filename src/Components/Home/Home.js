@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
-
+import NoteCards from '../noteCards/NoteCards';
+import Button from '../Button/Button';
 
 
 const Home = () => {
@@ -9,7 +10,8 @@ const Home = () => {
 
   return (
     <div>
-      <button onClick={()=> setOpenModal(true)}>Add Note</button>
+      <NoteCards openModel={setOpenModal}/> 
+      <Button onClick={()=> setOpenModal(true)}>Add Note</Button>
       {openModal && <Modal closeModal={setOpenModal}/>}
     </div>
   )

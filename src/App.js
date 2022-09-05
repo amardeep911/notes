@@ -1,7 +1,8 @@
 import React from 'react'
 // import Card from './Components/Card/Card'
 import Home from './Components/Home/Home'
-const App = () => {
+import Modal from './Components/Modal/Modal'
+const App = (props) => {
   return (
     <div>
       <Home/>
