@@ -44,14 +44,14 @@ const Ui = () => {
         }
         if(local[i].id ===id && !pinnedStatus){
           local[i].pinned=pinnedStatus;
-          if(i===0){
+          
             for(i;i<local.length;i++){
               if(local[i].pinned){
              const refnote=local.splice(i,1)[0]
              local.splice(0,0,refnote);
               }
             }
-          }
+          
         }
       
       }
@@ -150,56 +150,33 @@ const Ui = () => {
       {openModal && (
         <Modal closeModal={setOpenModal} addNote={updateLocalArr} />
       )}
-    
-      </div>
       
-
-      <div>
-    
-  
-      {/* show the posts, 10 posts at a time */}
-{/*      <div className="dataContainer">
-        {getPaginatedData().map((d, idx) => (
-          <RenderComponent key={idx} data={d} />
-        ))}
-        </div>*/}
-  
-      {/* show the pagiantion
-          it consists of next and previous buttons
-          along with page numbers, in our case, 5 page
-          numbers at a time
-      */}
-      <div className={classes.pagination}>
-        {/* previous button */}
+      <div className='pagination'>
+      <button
+        onClick={goToPreviousPage}
+        className={`prev ${currentPage === 1 ? 'disabled' : ''}`}
+      >
+        prev
+      </button>
+      {getPaginationGroup().map((item, index) => (
         <button
-          onClick={goToPreviousPage}
-          className={`prev ${currentPage === 1 ? 'disabled' : ''}`}
+          key={index}
+          onClick={changePage}
+          className={`paginationItem ${currentPage === item ? 'active' : null}`}
         >
-          prev
+          <span>{item}</span>
         </button>
-  
-        {/* show page numbers */}
-        {getPaginationGroup().map((item, index) => (
-          <button
-            key={index}
-            onClick={changePage}
-            className={`paginationItem ${currentPage === item ? 'active' : null}`}
-            // className={classes.paginationItem+currentPage === item ? classes.active : null}
-          >
-            <span>{item}</span>
-          </button>
-        ))}
-  
-        {/* next button */}
-        <button
-          onClick={goToNextPage}
-          // className={`next ${currentPage === pages ? 'disabled' : ''}`}
-          className={classes.next + ' ' + currentPage === pages ? classes.disabled : ''}
-        >
-          next
-        </button>
-      </div>
+      ))}
+      <button
+        onClick={goToNextPage}
+        className={`next ${currentPage === pages ? 'disabled' : ''}`}
+      >
+       next
+      </button>
     </div>
+      
+      </div>
+    
     </div>
   );
 };

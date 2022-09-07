@@ -6,7 +6,7 @@
     min-height: 100vh;
     padding: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-size: cover;
     position: relative;
     
@@ -25,9 +25,12 @@
     font-size: 75px;
     font-family: 'Outfit', sans-serif;
     opacity: 0.7;
+    width: 20rem;
+    height: 20rem;
 }
 .ui__heading{
     display: inline-block;
+   
     margin-top: 69px;
 /* margin-top: 69px; */
     
@@ -60,6 +63,10 @@
 .ui__tiles{
     position: relative;
     margin-top:2rem;
+    margin-left: 150px;
+    margin-right: 170px;
+    /* border: solid 2px red; */
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -70,51 +77,3 @@
     flex-direction: row; */
 }
 /*-------------------pagination--------------------------*/
-.pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .paginationItem {
-    background: #fff;
-    border: 2px solid #666;
-    padding: 10px 15px;
-    border-radius: 50%;
-    height: 45px;
-    width: 45px;
-    position: relative;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .paginationItem span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .prev,
-  .next {
-    background: #fff;
-    border: none;
-    padding: 10px;
-    color: blue;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
-    margin: 0 10px;
-    cursor: pointer;
-  }
-  
-  .paginationItem.active {
-    border: 1px solid #888;
-    color: #888;
-    pointer-events: none;
-  }
-  
-  .prev.disabled,
-  .next.disabled {
-    pointer-events: none;
-    box-shadow: none;
-    color: #999;
-  }
