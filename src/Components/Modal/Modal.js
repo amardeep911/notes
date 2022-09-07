@@ -11,6 +11,8 @@ const Modal = ({ closeModal, refresh, addNote, Title, Body }) => {
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
 
+  
+
   const noteCollectionRef = collection(db, "userNotes");
 
   async function saveHandler() {
