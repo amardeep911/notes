@@ -39,6 +39,14 @@ const Ui = () => {
         }
         if(local[i].id ===id && !pinnedStatus){
           local[i].pinned=pinnedStatus;
+          if(i===0){
+            for(i;i<local.length;i++){
+              if(local[i].pinned){
+             const refnote=local.splice(i,1)[0]
+             local.splice(0,0,refnote);
+              }
+            }
+          }
         }
       
       }
