@@ -24,6 +24,9 @@ const Ui = () => {
 
   const updateLocalArr = (title, body, pinned, id) => {
     setLocalArr((prev) => [...prev, { title, body, pinned, id }]);
+    const pageNum=Math.ceil((localArr.length+1)/6);
+    console.log(pageNum)
+   setCurrentPage(pageNum);
   };
   const refreshHandler=()=>{
     setRefresh(prev=>!prev);
