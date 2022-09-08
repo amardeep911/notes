@@ -15,7 +15,7 @@ const Ui = () => {
   const [localArr, setLocalArr] = useState([]);
   const [refresh,setRefresh]=useState([false]);
   const dataLimit=6;
-  const pageLimit=5;
+  const pageLimit=3;
   const [pages] = useState(Math.round(localArr.length / dataLimit));
   const [currentPage, setCurrentPage] = useState(1);
   
