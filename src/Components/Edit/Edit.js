@@ -58,7 +58,7 @@ const EditModal = (props) => {
                 closeModal(false);
               }}
             >
-              update
+              Update
             </Button>
             <Button onClick={() => closeModal(false)}>Cancel</Button>
           </div>

@@ -26,7 +26,9 @@ const refreshHandler=props.refresh;
       <Fragment>
     <div id={Id} className="fullcard">
       <div className="modal__container">
-        <div className="modal__main">
+        <div className="modal__main" onClick={()=> {
+          editCardHandler(Id)
+        }}>
           <h1 className="card__title">{title}</h1>
           <p className="card__description" >
  {body}{" "}

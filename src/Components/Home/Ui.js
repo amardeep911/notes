@@ -139,7 +139,7 @@ const Ui = () => {
     <div className={classes.ui__screen}>
     <div className={classes.container}>
       <div className={classes.ui__heading}>
-        <text className={classes.ui__title}>Note taking App</text>
+        <text className={classes.ui__title}>Note Keeper</text>
       </div>
       <span className={classes.ui__render}>
         <div className={classes.ui__tiles}>{noteTiles}</div>
@@ -171,7 +171,7 @@ const Ui = () => {
         onClick={goToNextPage}
         className={`next ${currentPage === pages ? 'disabled' : ''}`}
       >
-       next
+       Next
       </button>
     </div>
       
