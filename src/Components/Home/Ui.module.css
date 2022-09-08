@@ -23,15 +23,16 @@
     margin-bottom: 0;
     margin-left: 83px;
     font-size: 75px;
+    
     font-family: 'Outfit', sans-serif;
-    opacity: 0.7;
+    opacity: 0.8;
     width: 20rem;
     height: 20rem;
 }
 .ui__heading{
     display: inline-block;
    
-    margin-top: 69px;
+    margin-top: 20px;
 /* margin-top: 69px; */
     
 }

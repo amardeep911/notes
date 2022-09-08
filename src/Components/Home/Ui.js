@@ -156,7 +156,7 @@ const Ui = () => {
         onClick={goToPreviousPage}
         className={`prev ${currentPage === 1 ? 'disabled' : ''}`}
       >
-        prev
+        Prev
       </button>
       {getPaginationGroup().map((item, index) => (
         <button

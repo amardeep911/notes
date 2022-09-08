@@ -8,15 +8,16 @@
     margin-left: auto; 
     margin-right: auto; 
     width: 100%;
-    top: 90vh;
+    top: 92%;
     
   }
   
   .paginationItem {
     background: #fff;
-    border: 2px solid #666;
+    /* border: 2px solid #666; */
     padding: 10px 15px;
     border-radius: 50%;
+    border: none;
     height: 45px;
     width: 45px;
     position: relative;
@@ -25,6 +26,7 @@
   }
   
   .paginationItem span {
+    text-decoration: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,8 +63,13 @@ padding: 10px;
   
   .paginationItem.active {
     border: 1px solid #888;
-    color: #888;
+    color: blue;
     pointer-events: none;
+  }
+  .paginationItem:hover{
+    background-color: rgba(5, 194, 247, 0.538);
+    
+    transform: scale(1.1);
   }
   
   .prev.disabled,
